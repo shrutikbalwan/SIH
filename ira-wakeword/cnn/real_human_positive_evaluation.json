@@ -1,0 +1,1802 @@
+{
+  "model": {
+    "path": "D:\\SIH\\ira-wakeword\\cnn\\models\\ira_cnn_v2_3_int8.tflite",
+    "sha256": "b9554c054bc9a57a00e874824e5a4ab9c3254b4505ca8a3ec67835d193103de0",
+    "sha256_verified": true,
+    "input_scale": 0.06078097224235535,
+    "input_zero_point": 49,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128,
+    "decision_rule": "WAKE iff q_out >= -25",
+    "effective_threshold": 0.40234375
+  },
+  "source_folder": "D:\\SIH\\ira-wakeword\\ira words",
+  "windowing": {
+    "primary": "exact max-energy 1-second window over all sample offsets",
+    "diagnostic": "sliding 1s window, 10ms hop, any-fire (not the verdict)",
+    "naive_first_second_rejected_because": "would truncate the VAD-active span in 685/836 files (82%)"
+  },
+  "counts": {
+    "files_found": 836,
+    "valid": 836,
+    "duplicates_removed": 5,
+    "evaluated_unique": 831
+  },
+  "primary": {
+    "n": 831,
+    "TP": 542,
+    "FN": 289,
+    "TPR_pct": 65.22262334536703,
+    "ci95_pct": [
+      61.874763692038414,
+      68.46204606448903
+    ]
+  },
+  "including_duplicates": {
+    "n": 836,
+    "TP": 547,
+    "FN": 289,
+    "TPR_pct": 65.43062200956938,
+    "ci95_pct": [
+      62.096893744432926,
+      68.6550920457714
+    ]
+  },
+  "diagnostic_any_fire": {
+    "TP": 781,
+    "FN": 50,
+    "TPR_pct": 93.98315282791818,
+    "ci95_pct": [
+      92.14414715862918,
+      95.50156348537794
+    ]
+  },
+  "score_distribution": {
+    "mean": 0.599099353188929,
+    "median": 0.72265625,
+    "min": 0.0,
+    "max": 0.99609375,
+    "P1": 0.00390625,
+    "P5": 0.01171875,
+    "P10": 0.05078125,
+    "P25": 0.2109375
+  },
+  "false_negatives": [
+    {
+      "name": "ira_0028.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "ira_0177.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0214.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0481.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.0335
+    },
+    {
+      "name": "ira_0552.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 2.0135
+    },
+    {
+      "name": "ira_0553.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "ira_0641.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0656.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "ira_0678.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0719.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.7535
+    },
+    {
+      "name": "ira_0723.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0773.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0815.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 2.2535
+    },
+    {
+      "name": "ira_0092.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0372.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 0.9535
+    },
+    {
+      "name": "ira_0392.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "ira_0394.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "ira_0447.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0551.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 2.0935
+    },
+    {
+      "name": "ira_0613.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.9335
+    },
+    {
+      "name": "ira_0615.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0767.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0108.wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "ira_0474.wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "ira_0500.wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0658.wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "ira_0778.wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0049.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "ira_0099.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0186.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0238.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "ira_0396.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0436.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "ira_0644.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0665.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0667.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.9135
+    },
+    {
+      "name": "ira_0686.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0709.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0046.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 2.0735
+    },
+    {
+      "name": "ira_0346.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "ira_0426.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0443.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0495.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "ira_0548.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.8535
+    },
+    {
+      "name": "ira_0654.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.0335
+    },
+    {
+      "name": "ira_0684.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0770.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0167.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0234.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "ira_0374.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "ira_0454.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 0.9935
+    },
+    {
+      "name": "ira_0540.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.8135
+    },
+    {
+      "name": "ira_0624.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.6935
+    },
+    {
+      "name": "ira_0683.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "ira_0792.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0176.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0242.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0293.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0349.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "ira_0412.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0524.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.7135
+    },
+    {
+      "name": "ira_0795.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0195.wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0368.wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "ira_0439.wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0616.wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "ira_0098.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "ira_0189.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0352.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0365.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 0.9335
+    },
+    {
+      "name": "ira_0390.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0464.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0480.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "ira_0541.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 2.3535
+    },
+    {
+      "name": "ira_0560.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0791.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "ira_0040.wav",
+      "q_out": -70,
+      "score": 0.2265625,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0230.wav",
+      "q_out": -70,
+      "score": 0.2265625,
+      "duration_s": 2.3335
+    },
+    {
+      "name": "ira_0662.wav",
+      "q_out": -70,
+      "score": 0.2265625,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0187.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0339.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0415.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0558.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 2.2335
+    },
+    {
+      "name": "ira_0691.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0742.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0807.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0166.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0199.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0537.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.6135
+    },
+    {
+      "name": "ira_0578.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.7135
+    },
+    {
+      "name": "ira_0695.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0793.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0059.wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "ira_0181.wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0193.wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0441.wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "ira_0744.wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0020.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "ira_0033.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0069.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0245.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "ira_0353.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0405.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "ira_0468.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0556.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.6935
+    },
+    {
+      "name": "ira_0748.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0750.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "ira_0753.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 0.9535
+    },
+    {
+      "name": "ira_0812.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0078.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0303.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "ira_0431.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0444.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0456.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "ira_0461.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0462.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0467.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "ira_0687.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0378.wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0497.wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0544.wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "ira_0755.wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "ira_0765.wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0163.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0248.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.7735
+    },
+    {
+      "name": "ira_0320.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0403.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0406.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "ira_0450.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0466.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "ira_0070.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "ira_0184.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0265.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0688.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0689.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0784.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 2.5735
+    },
+    {
+      "name": "ira_0143.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "ira_0351.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.8135
+    },
+    {
+      "name": "ira_0370.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "ira_0397.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0422.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0508.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0676.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "ira_0816.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0105.wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0363.wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0779.wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "ira_0781.wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0782.wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 2.2135
+    },
+    {
+      "name": "ira_0023.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "ira_0226.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.9535
+    },
+    {
+      "name": "ira_0244.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0419.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0465.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0536.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0561.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0600.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "ira_0180.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "ira_0182.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 3.3135
+    },
+    {
+      "name": "ira_0185.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "ira_0188.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0391.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 2.5135
+    },
+    {
+      "name": "ira_0459.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0573.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "ira_0581.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0749.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.0335
+    },
+    {
+      "name": "ira_0833.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "ira_0019.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "ira_0200.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 2.4335
+    },
+    {
+      "name": "ira_0360.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0491.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.7935
+    },
+    {
+      "name": "ira_0758.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0469.wav",
+      "q_out": -108,
+      "score": 0.078125,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0783.wav",
+      "q_out": -108,
+      "score": 0.078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0814.wav",
+      "q_out": -108,
+      "score": 0.078125,
+      "duration_s": 1.8735
+    },
+    {
+      "name": "ira_0235.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "ira_0236.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "ira_0251.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "ira_0361.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "ira_0395.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0539.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.9935
+    },
+    {
+      "name": "ira_0546.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "ira_0191.wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "ira_0192.wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0197.wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0340.wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0435.wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0054.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "ira_0196.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "ira_0237.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0325.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0455.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0757.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 0.9935
+    },
+    {
+      "name": "ira_0198.wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0364.wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0492.wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0576.wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 2.1335
+    },
+    {
+      "name": "ira_0741.wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0183.wav",
+      "q_out": -114,
+      "score": 0.0546875,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "ira_0693.wav",
+      "q_out": -114,
+      "score": 0.0546875,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0194.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0215.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0240.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0356.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "ira_0417.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0453.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0401.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0437.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "ira_0487.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0494.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0542.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 2.4335
+    },
+    {
+      "name": "ira_0062.wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "ira_0634.wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "ira_0680.wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0685.wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "ira_0803.wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0342.wav",
+      "q_out": -118,
+      "score": 0.0390625,
+      "duration_s": 1.7135
+    },
+    {
+      "name": "ira_0440.wav",
+      "q_out": -118,
+      "score": 0.0390625,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0790.wav",
+      "q_out": -118,
+      "score": 0.0390625,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0064.wav",
+      "q_out": -119,
+      "score": 0.03515625,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "ira_0458.wav",
+      "q_out": -119,
+      "score": 0.03515625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0502.wav",
+      "q_out": -119,
+      "score": 0.03515625,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "ira_0190.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0305.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "ira_0407.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0543.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.6535
+    },
+    {
+      "name": "ira_0657.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "ira_0037.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0229.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0354.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 2.9135
+    },
+    {
+      "name": "ira_0445.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "ira_0493.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0312.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0389.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 2.0935
+    },
+    {
+      "name": "ira_0448.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "ira_0692.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0694.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "ira_0058.wav",
+      "q_out": -123,
+      "score": 0.01953125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0393.wav",
+      "q_out": -123,
+      "score": 0.01953125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0538.wav",
+      "q_out": -123,
+      "score": 0.01953125,
+      "duration_s": 1.7335
+    },
+    {
+      "name": "ira_0227.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "ira_0232.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0239.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.8135
+    },
+    {
+      "name": "ira_0457.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0471.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0483.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0017.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "ira_0247.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "ira_0315.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0357.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "ira_0413.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0451.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0485.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "ira_0510.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0520.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.8735
+    },
+    {
+      "name": "ira_0063.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.9735
+    },
+    {
+      "name": "ira_0068.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.7935
+    },
+    {
+      "name": "ira_0209.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "ira_0213.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "ira_0216.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 2.6935
+    },
+    {
+      "name": "ira_0219.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0338.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "ira_0355.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.6935
+    },
+    {
+      "name": "ira_0470.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0473.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0475.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "ira_0477.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "ira_0482.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "ira_0484.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0488.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "ira_0490.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "ira_0504.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0018.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "ira_0207.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6135
+    },
+    {
+      "name": "ira_0208.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "ira_0211.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "ira_0218.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "ira_0358.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6135
+    },
+    {
+      "name": "ira_0472.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "ira_0479.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "ira_0545.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 2.1735
+    },
+    {
+      "name": "ira_0577.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6535
+    },
+    {
+      "name": "ira_0640.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "ira_0682.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0788.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "ira_0016.wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.6535
+    },
+    {
+      "name": "ira_0478.wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "ira_0574.wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.8335
+    },
+    {
+      "name": "ira_0642.wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.2335
+    }
+  ],
+  "speaker_ids_determinable": false,
+  "classification": "FAIL"
+}

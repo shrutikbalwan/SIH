@@ -1,0 +1,37 @@
+{
+  "tflite_path": "D:\\SIH\\ira-wakeword\\cnn\\models\\ira_cnn_v2_3_int8.tflite",
+  "tflite_sha256": "b9554c054bc9a57a00e874824e5a4ab9c3254b4505ca8a3ec67835d193103de0",
+  "tflite_size_bytes": 13312,
+  "input": {
+    "dtype": "int8",
+    "scale": 0.06078097224235535,
+    "zero_point": 49,
+    "shape": [
+      1,
+      49,
+      40,
+      1
+    ]
+  },
+  "output": {
+    "dtype": "int8",
+    "scale": 0.00390625,
+    "zero_point": -128,
+    "shape": [
+      1,
+      1
+    ]
+  },
+  "semantic_threshold": 0.4,
+  "raw_int8_boundary": {
+    "rule": "wake iff q_out >= q_min",
+    "q_min": -25,
+    "derivation": "q_min = ceil(threshold/out_scale + out_zero_point)",
+    "q_min_real_valued": -25.599999999999994,
+    "probability_at_q_min": 0.40234375,
+    "probability_at_q_min_minus_1": 0.3984375,
+    "effective_semantic_threshold": 0.40234375,
+    "derived_from": "scale and zero_point only (not observed codes)"
+  },
+  "threshold_provenance": "selected on development validation only"
+}

@@ -1,0 +1,240 @@
+{
+  "step0": {
+    "file": "D:\\SIH\\ira-wakeword\\cnn\\real_human_hard_fn_review - real_human_hard_fn_review.csv.csv",
+    "rows": 50,
+    "rows_with_label": 50,
+    "unlabeled": [],
+    "malformed": [],
+    "duplicate_filenames": [],
+    "multi_label_rows": {},
+    "verification": "PASS"
+  },
+  "step1": {
+    "counts": {
+      "correct_ira": 46,
+      "pronunciation_variation": 0,
+      "unclear_mumbled": 3,
+      "corrupted_clipped": 1,
+      "wrong_word": 0,
+      "multiple_words_speech": 0,
+      "other": 0
+    },
+    "overlap_correct_plus_pronvar": 0
+  },
+  "step2": {
+    "rule": "VALID=correct_ira|pronunciation_variation; INVALID=wrong_word|corrupted_clipped|multiple_words_speech; AMBIGUOUS=unclear_mumbled|other with no valid label",
+    "valid": 46,
+    "invalid": 1,
+    "ambiguous": 3,
+    "invalid_files": [
+      "ira_0657.wav"
+    ],
+    "ambiguous_files": [
+      "ira_0251.wav",
+      "ira_0642.wav",
+      "ira_0779.wav"
+    ]
+  },
+  "step3": {
+    "genuine_hard_misses": 46,
+    "pct_of_50": 92.0,
+    "median_max_q_out": -77.0,
+    "median_max_score": 0.19921875,
+    "score_distribution": {
+      "n": 46,
+      "median": 0.19921875,
+      "P10": 0.03515625,
+      "P25": 0.1201171875,
+      "P75": 0.3125,
+      "P90": 0.361328125,
+      "min": 0.0078125,
+      "max": 0.39453125
+    },
+    "deeply_rejected_le_0.15": 15,
+    "near_boundary_q_ge_-33": 5
+  },
+  "step4": {
+    "original_benchmark": {
+      "n": 831,
+      "TP": 741,
+      "FN": 90,
+      "TPR": 89.1697,
+      "ci": [
+        86.856,
+        91.2008
+      ]
+    },
+    "human_adjudicated": {
+      "numerator": 741,
+      "denominator": 830,
+      "TPR": 89.27710843373494,
+      "ci": [
+        86.97075642317074,
+        91.29980475716991
+      ],
+      "removed": [
+        "ira_0657.wav"
+      ],
+      "delta_pp": 0.10740843373493192
+    },
+    "note": "does not replace the original benchmark"
+  },
+  "step5": {
+    "per_session": [
+      {
+        "session": "S16",
+        "clips": 140,
+        "all_fn": 18,
+        "genuine": 13,
+        "rate": 9.285714285714286,
+        "share": 28.26086956521739
+      },
+      {
+        "session": "S07",
+        "clips": 39,
+        "all_fn": 20,
+        "genuine": 12,
+        "rate": 30.76923076923077,
+        "share": 26.08695652173913
+      },
+      {
+        "session": "S08",
+        "clips": 127,
+        "all_fn": 11,
+        "genuine": 5,
+        "rate": 3.937007874015748,
+        "share": 10.869565217391305
+      },
+      {
+        "session": "S09",
+        "clips": 12,
+        "all_fn": 3,
+        "genuine": 3,
+        "rate": 25.0,
+        "share": 6.521739130434782
+      },
+      {
+        "session": "S17",
+        "clips": 41,
+        "all_fn": 7,
+        "genuine": 3,
+        "rate": 7.317073170731707,
+        "share": 6.521739130434782
+      },
+      {
+        "session": "S19",
+        "clips": 61,
+        "all_fn": 7,
+        "genuine": 3,
+        "rate": 4.918032786885246,
+        "share": 6.521739130434782
+      },
+      {
+        "session": "S01",
+        "clips": 40,
+        "all_fn": 2,
+        "genuine": 2,
+        "rate": 5.0,
+        "share": 4.3478260869565215
+      },
+      {
+        "session": "S13",
+        "clips": 61,
+        "all_fn": 7,
+        "genuine": 2,
+        "rate": 3.278688524590164,
+        "share": 4.3478260869565215
+      },
+      {
+        "session": "S15",
+        "clips": 40,
+        "all_fn": 5,
+        "genuine": 2,
+        "rate": 5.0,
+        "share": 4.3478260869565215
+      },
+      {
+        "session": "S12",
+        "clips": 58,
+        "all_fn": 7,
+        "genuine": 1,
+        "rate": 1.7241379310344827,
+        "share": 2.1739130434782608
+      },
+      {
+        "session": "S04",
+        "clips": 4,
+        "all_fn": 2,
+        "genuine": 0,
+        "rate": 0.0,
+        "share": 0.0
+      },
+      {
+        "session": "S18",
+        "clips": 20,
+        "all_fn": 1,
+        "genuine": 0,
+        "rate": 0.0,
+        "share": 0.0
+      }
+    ],
+    "S07": 12,
+    "S16": 13,
+    "others": {
+      "S19": 3,
+      "S09": 3,
+      "S17": 3,
+      "S13": 2,
+      "S15": 2,
+      "S01": 2,
+      "S12": 1,
+      "S08": 5
+    },
+    "caveat": "session is export grouping, not verified speaker"
+  },
+  "step6": {
+    "rms": {
+      "genuine_median": 0.08203782083037568,
+      "tp_median": 0.13731343349519262
+    },
+    "peak": {
+      "genuine_median": 0.4864654541015625,
+      "tp_median": 0.97308349609375
+    },
+    "active_rms": {
+      "genuine_median": 0.11359372059686067,
+      "tp_median": 0.15036482630866546
+    },
+    "duration_s": {
+      "genuine_median": 1.2635,
+      "tp_median": 1.2335
+    },
+    "active_dur_s": {
+      "genuine_median": 0.82615625,
+      "tp_median": 1.0029375
+    },
+    "clipped_pct": {
+      "genuine_median": 0.0,
+      "tp_median": 0.0
+    },
+    "silence_before_s": {
+      "genuine_median": 0.274,
+      "tp_median": 0.1668125
+    },
+    "silence_after_s": {
+      "genuine_median": 0.0428125,
+      "tp_median": 0.00125
+    },
+    "crest_factor": {
+      "genuine_median": 6.384425180767368,
+      "tp_median": 6.519690162112488
+    },
+    "clipped_genuine_pct": 8.695652173913043,
+    "clipped_tp_pct": 42.10526315789473
+  },
+  "step7": {
+    "pronunciation_variation_among_genuine": 0,
+    "pct": 0.0,
+    "supported": false
+  }
+}

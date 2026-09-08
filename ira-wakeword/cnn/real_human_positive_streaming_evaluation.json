@@ -1,0 +1,670 @@
+{
+  "model": {
+    "path": "D:\\SIH\\ira-wakeword\\cnn\\models\\ira_cnn_v2_3_int8.tflite",
+    "sha256": "b9554c054bc9a57a00e874824e5a4ab9c3254b4505ca8a3ec67835d193103de0",
+    "sha256_verified": true,
+    "input_scale": 0.06078097224235535,
+    "input_zero_point": 49,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128,
+    "decision_rule": "WAKE iff q_out >= -25"
+  },
+  "source_folder": "D:\\SIH\\ira-wakeword\\ira words",
+  "method": {
+    "primary": "1 s window, 100 ms stride, complete-coverage tail window, any-fire",
+    "diagnostic": "same at 10 ms stride (DIAGNOSTIC ONLY)",
+    "short_files": "zero-padded to 1 s, evaluated once"
+  },
+  "counts": {
+    "files_found": 836,
+    "duplicates_removed": 5,
+    "evaluated_unique": 831
+  },
+  "primary_100ms": {
+    "n": 831,
+    "TP": 741,
+    "FN": 90,
+    "TPR_pct": 89.16967509025271,
+    "ci95_pct": [
+      86.85604346049143,
+      91.2008162317608
+    ],
+    "windows_total": 3856
+  },
+  "tpr_by_duration_100ms": [
+    {
+      "bin": "<1.0 s",
+      "n": 118,
+      "TP": 109,
+      "FN": 9,
+      "TPR": 92.37288135593221,
+      "ci": [
+        86.01485875574521,
+        96.45314467643283
+      ]
+    },
+    {
+      "bin": "1.0-1.25 s",
+      "n": 309,
+      "TP": 282,
+      "FN": 27,
+      "TPR": 91.2621359223301,
+      "ci": [
+        87.54156354783184,
+        94.16269199240307
+      ]
+    },
+    {
+      "bin": "1.25-1.5 s",
+      "n": 221,
+      "TP": 191,
+      "FN": 30,
+      "TPR": 86.42533936651584,
+      "ci": [
+        81.19168278126756,
+        90.65025162041249
+      ]
+    },
+    {
+      "bin": "1.5-2.0 s",
+      "n": 140,
+      "TP": 119,
+      "FN": 21,
+      "TPR": 85.0,
+      "ci": [
+        77.98932519502925,
+        90.46854238087982
+      ]
+    },
+    {
+      "bin": ">2.0 s",
+      "n": 43,
+      "TP": 40,
+      "FN": 3,
+      "TPR": 93.02325581395348,
+      "ci": [
+        80.93927681142077,
+        98.53745030048677
+      ]
+    }
+  ],
+  "first_fire_seconds": {
+    "min": 0.0,
+    "median": 0.0,
+    "mean": 0.035134278002699054,
+    "max": 1.3,
+    "P90": 0.1,
+    "P99": 0.5894000000000006
+  },
+  "max_score_distribution": {
+    "mean": 0.8111509100481348,
+    "median": 0.93359375,
+    "min": 0.0078125,
+    "max": 0.99609375,
+    "P1": 0.05039062500000001,
+    "P5": 0.205078125,
+    "P10": 0.37109375
+  },
+  "never_fire": [
+    {
+      "filename": "ira_0394.wav",
+      "max_q_out": -27,
+      "max_score": 0.39453125,
+      "duration_s": 1.0535
+    },
+    {
+      "filename": "ira_0184.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.4935
+    },
+    {
+      "filename": "ira_0186.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.2735
+    },
+    {
+      "filename": "ira_0189.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.4335
+    },
+    {
+      "filename": "ira_0357.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.4935
+    },
+    {
+      "filename": "ira_0372.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 0.9535
+    },
+    {
+      "filename": "ira_0546.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.5735
+    },
+    {
+      "filename": "ira_0581.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.2735
+    },
+    {
+      "filename": "ira_0639.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.7135
+    },
+    {
+      "filename": "ira_0741.wav",
+      "max_q_out": -33,
+      "max_score": 0.37109375,
+      "duration_s": 1.2335
+    },
+    {
+      "filename": "ira_0185.wav",
+      "max_q_out": -38,
+      "max_score": 0.3515625,
+      "duration_s": 1.5535
+    },
+    {
+      "filename": "ira_0474.wav",
+      "max_q_out": -38,
+      "max_score": 0.3515625,
+      "duration_s": 0.9735
+    },
+    {
+      "filename": "ira_0689.wav",
+      "max_q_out": -38,
+      "max_score": 0.3515625,
+      "duration_s": 1.1735
+    },
+    {
+      "filename": "ira_0215.wav",
+      "max_q_out": -43,
+      "max_score": 0.33203125,
+      "duration_s": 1.4935
+    },
+    {
+      "filename": "ira_0245.wav",
+      "max_q_out": -43,
+      "max_score": 0.33203125,
+      "duration_s": 1.1135
+    },
+    {
+      "filename": "ira_0396.wav",
+      "max_q_out": -43,
+      "max_score": 0.33203125,
+      "duration_s": 1.0935
+    },
+    {
+      "filename": "ira_0658.wav",
+      "max_q_out": -43,
+      "max_score": 0.33203125,
+      "duration_s": 1.4535
+    },
+    {
+      "filename": "ira_0683.wav",
+      "max_q_out": -43,
+      "max_score": 0.33203125,
+      "duration_s": 1.4135
+    },
+    {
+      "filename": "ira_0193.wav",
+      "max_q_out": -48,
+      "max_score": 0.3125,
+      "duration_s": 1.3135
+    },
+    {
+      "filename": "ira_0216.wav",
+      "max_q_out": -48,
+      "max_score": 0.3125,
+      "duration_s": 2.6935
+    },
+    {
+      "filename": "ira_0453.wav",
+      "max_q_out": -48,
+      "max_score": 0.3125,
+      "duration_s": 1.3135
+    },
+    {
+      "filename": "ira_0684.wav",
+      "max_q_out": -48,
+      "max_score": 0.3125,
+      "duration_s": 1.0935
+    },
+    {
+      "filename": "ira_0218.wav",
+      "max_q_out": -53,
+      "max_score": 0.29296875,
+      "duration_s": 1.3935
+    },
+    {
+      "filename": "ira_0237.wav",
+      "max_q_out": -53,
+      "max_score": 0.29296875,
+      "duration_s": 1.1335
+    },
+    {
+      "filename": "ira_0445.wav",
+      "max_q_out": -53,
+      "max_score": 0.29296875,
+      "duration_s": 1.1335
+    },
+    {
+      "filename": "ira_0454.wav",
+      "max_q_out": -53,
+      "max_score": 0.29296875,
+      "duration_s": 0.9935
+    },
+    {
+      "filename": "ira_0556.wav",
+      "max_q_out": -53,
+      "max_score": 0.29296875,
+      "duration_s": 1.6935
+    },
+    {
+      "filename": "ira_0574.wav",
+      "max_q_out": -53,
+      "max_score": 0.29296875,
+      "duration_s": 1.8335
+    },
+    {
+      "filename": "ira_0578.wav",
+      "max_q_out": -53,
+      "max_score": 0.29296875,
+      "duration_s": 1.7135
+    },
+    {
+      "filename": "ira_0540.wav",
+      "max_q_out": -57,
+      "max_score": 0.27734375,
+      "duration_s": 1.8135
+    },
+    {
+      "filename": "ira_0576.wav",
+      "max_q_out": -57,
+      "max_score": 0.27734375,
+      "duration_s": 2.1335
+    },
+    {
+      "filename": "ira_0657.wav",
+      "max_q_out": -57,
+      "max_score": 0.27734375,
+      "duration_s": 1.5335
+    },
+    {
+      "filename": "ira_0195.wav",
+      "max_q_out": -61,
+      "max_score": 0.26171875,
+      "duration_s": 1.1735
+    },
+    {
+      "filename": "ira_0251.wav",
+      "max_q_out": -61,
+      "max_score": 0.26171875,
+      "duration_s": 1.0535
+    },
+    {
+      "filename": "ira_0368.wav",
+      "max_q_out": -61,
+      "max_score": 0.26171875,
+      "duration_s": 0.9735
+    },
+    {
+      "filename": "ira_0479.wav",
+      "max_q_out": -61,
+      "max_score": 0.26171875,
+      "duration_s": 1.1935
+    },
+    {
+      "filename": "ira_0573.wav",
+      "max_q_out": -61,
+      "max_score": 0.26171875,
+      "duration_s": 1.5735
+    },
+    {
+      "filename": "ira_0691.wav",
+      "max_q_out": -61,
+      "max_score": 0.26171875,
+      "duration_s": 1.3735
+    },
+    {
+      "filename": "ira_0188.wav",
+      "max_q_out": -66,
+      "max_score": 0.2421875,
+      "duration_s": 1.4935
+    },
+    {
+      "filename": "ira_0365.wav",
+      "max_q_out": -66,
+      "max_score": 0.2421875,
+      "duration_s": 0.9335
+    },
+    {
+      "filename": "ira_0687.wav",
+      "max_q_out": -66,
+      "max_score": 0.2421875,
+      "duration_s": 1.3335
+    },
+    {
+      "filename": "ira_0693.wav",
+      "max_q_out": -66,
+      "max_score": 0.2421875,
+      "duration_s": 1.3335
+    },
+    {
+      "filename": "ira_0190.wav",
+      "max_q_out": -70,
+      "max_score": 0.2265625,
+      "duration_s": 1.2935
+    },
+    {
+      "filename": "ira_0244.wav",
+      "max_q_out": -70,
+      "max_score": 0.2265625,
+      "duration_s": 1.1535
+    },
+    {
+      "filename": "ira_0537.wav",
+      "max_q_out": -70,
+      "max_score": 0.2265625,
+      "duration_s": 1.6135
+    },
+    {
+      "filename": "ira_0539.wav",
+      "max_q_out": -70,
+      "max_score": 0.2265625,
+      "duration_s": 1.9935
+    },
+    {
+      "filename": "ira_0016.wav",
+      "max_q_out": -74,
+      "max_score": 0.2109375,
+      "duration_s": 1.6535
+    },
+    {
+      "filename": "ira_0397.wav",
+      "max_q_out": -74,
+      "max_score": 0.2109375,
+      "duration_s": 1.2735
+    },
+    {
+      "filename": "ira_0340.wav",
+      "max_q_out": -77,
+      "max_score": 0.19921875,
+      "duration_s": 1.6335
+    },
+    {
+      "filename": "ira_0695.wav",
+      "max_q_out": -77,
+      "max_score": 0.19921875,
+      "duration_s": 1.1335
+    },
+    {
+      "filename": "ira_0181.wav",
+      "max_q_out": -81,
+      "max_score": 0.18359375,
+      "duration_s": 1.0935
+    },
+    {
+      "filename": "ira_0240.wav",
+      "max_q_out": -81,
+      "max_score": 0.18359375,
+      "duration_s": 1.1735
+    },
+    {
+      "filename": "ira_0349.wav",
+      "max_q_out": -81,
+      "max_score": 0.18359375,
+      "duration_s": 1.4135
+    },
+    {
+      "filename": "ira_0744.wav",
+      "max_q_out": -81,
+      "max_score": 0.18359375,
+      "duration_s": 1.0935
+    },
+    {
+      "filename": "ira_0748.wav",
+      "max_q_out": -84,
+      "max_score": 0.171875,
+      "duration_s": 1.2735
+    },
+    {
+      "filename": "ira_0750.wav",
+      "max_q_out": -84,
+      "max_score": 0.171875,
+      "duration_s": 0.9735
+    },
+    {
+      "filename": "ira_0753.wav",
+      "max_q_out": -84,
+      "max_score": 0.171875,
+      "duration_s": 0.9535
+    },
+    {
+      "filename": "ira_0389.wav",
+      "max_q_out": -87,
+      "max_score": 0.16015625,
+      "duration_s": 2.0935
+    },
+    {
+      "filename": "ira_0472.wav",
+      "max_q_out": -87,
+      "max_score": 0.16015625,
+      "duration_s": 1.5135
+    },
+    {
+      "filename": "ira_0642.wav",
+      "max_q_out": -87,
+      "max_score": 0.16015625,
+      "duration_s": 1.2335
+    },
+    {
+      "filename": "ira_0685.wav",
+      "max_q_out": -87,
+      "max_score": 0.16015625,
+      "duration_s": 1.2535
+    },
+    {
+      "filename": "ira_0199.wav",
+      "max_q_out": -90,
+      "max_score": 0.1484375,
+      "duration_s": 1.4335
+    },
+    {
+      "filename": "ira_0338.wav",
+      "max_q_out": -90,
+      "max_score": 0.1484375,
+      "duration_s": 1.5535
+    },
+    {
+      "filename": "ira_0401.wav",
+      "max_q_out": -90,
+      "max_score": 0.1484375,
+      "duration_s": 1.1335
+    },
+    {
+      "filename": "ira_0538.wav",
+      "max_q_out": -93,
+      "max_score": 0.13671875,
+      "duration_s": 1.7335
+    },
+    {
+      "filename": "ira_0198.wav",
+      "max_q_out": -95,
+      "max_score": 0.12890625,
+      "duration_s": 1.1535
+    },
+    {
+      "filename": "ira_0473.wav",
+      "max_q_out": -95,
+      "max_score": 0.12890625,
+      "duration_s": 1.2935
+    },
+    {
+      "filename": "ira_0536.wav",
+      "max_q_out": -95,
+      "max_score": 0.12890625,
+      "duration_s": 1.2135
+    },
+    {
+      "filename": "ira_0018.wav",
+      "max_q_out": -98,
+      "max_score": 0.1171875,
+      "duration_s": 1.2535
+    },
+    {
+      "filename": "ira_0577.wav",
+      "max_q_out": -98,
+      "max_score": 0.1171875,
+      "duration_s": 1.6535
+    },
+    {
+      "filename": "ira_0833.wav",
+      "max_q_out": -98,
+      "max_score": 0.1171875,
+      "duration_s": 1.0535
+    },
+    {
+      "filename": "ira_0211.wav",
+      "max_q_out": -100,
+      "max_score": 0.109375,
+      "duration_s": 1.5135
+    },
+    {
+      "filename": "ira_0478.wav",
+      "max_q_out": -100,
+      "max_score": 0.109375,
+      "duration_s": 1.3335
+    },
+    {
+      "filename": "ira_0779.wav",
+      "max_q_out": -100,
+      "max_score": 0.109375,
+      "duration_s": 0.9735
+    },
+    {
+      "filename": "ira_0196.wav",
+      "max_q_out": -104,
+      "max_score": 0.09375,
+      "duration_s": 1.2735
+    },
+    {
+      "filename": "ira_0194.wav",
+      "max_q_out": -106,
+      "max_score": 0.0859375,
+      "duration_s": 1.3535
+    },
+    {
+      "filename": "ira_0180.wav",
+      "max_q_out": -109,
+      "max_score": 0.07421875,
+      "duration_s": 1.5535
+    },
+    {
+      "filename": "ira_0395.wav",
+      "max_q_out": -109,
+      "max_score": 0.07421875,
+      "duration_s": 1.2935
+    },
+    {
+      "filename": "ira_0694.wav",
+      "max_q_out": -111,
+      "max_score": 0.06640625,
+      "duration_s": 1.1135
+    },
+    {
+      "filename": "ira_0757.wav",
+      "max_q_out": -112,
+      "max_score": 0.0625,
+      "duration_s": 0.9935
+    },
+    {
+      "filename": "ira_0183.wav",
+      "max_q_out": -113,
+      "max_score": 0.05859375,
+      "duration_s": 1.0935
+    },
+    {
+      "filename": "ira_0197.wav",
+      "max_q_out": -116,
+      "max_score": 0.046875,
+      "duration_s": 1.0935
+    },
+    {
+      "filename": "ira_0393.wav",
+      "max_q_out": -119,
+      "max_score": 0.03515625,
+      "duration_s": 1.2135
+    },
+    {
+      "filename": "ira_0640.wav",
+      "max_q_out": -120,
+      "max_score": 0.03125,
+      "duration_s": 1.2135
+    },
+    {
+      "filename": "ira_0682.wav",
+      "max_q_out": -120,
+      "max_score": 0.03125,
+      "duration_s": 1.3335
+    },
+    {
+      "filename": "ira_0692.wav",
+      "max_q_out": -120,
+      "max_score": 0.03125,
+      "duration_s": 1.3735
+    },
+    {
+      "filename": "ira_0207.wav",
+      "max_q_out": -122,
+      "max_score": 0.0234375,
+      "duration_s": 1.6135
+    },
+    {
+      "filename": "ira_0208.wav",
+      "max_q_out": -124,
+      "max_score": 0.015625,
+      "duration_s": 1.6335
+    },
+    {
+      "filename": "ira_0209.wav",
+      "max_q_out": -124,
+      "max_score": 0.015625,
+      "duration_s": 1.4335
+    },
+    {
+      "filename": "ira_0213.wav",
+      "max_q_out": -126,
+      "max_score": 0.0078125,
+      "duration_s": 1.2335
+    }
+  ],
+  "comparison_vs_max_energy_single_window": {
+    "previous_TP": 542,
+    "previous_FN": 289,
+    "previous_TPR_pct": 65.2226,
+    "previous_FN_rescued": 200,
+    "previous_FN_remaining": 89,
+    "previous_TP_now_FN": 1,
+    "delta_pp": 23.94707509025271
+  },
+  "diagnostic_10ms": {
+    "TP": 781,
+    "FN": 50,
+    "TPR_pct": 93.98315282791818,
+    "ci95_pct": [
+      92.14414715862918,
+      95.50156348537794
+    ],
+    "label": "DIAGNOSTIC ONLY - not the verdict"
+  },
+  "classification_primary": "FAIL"
+}

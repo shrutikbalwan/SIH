@@ -1,0 +1,15 @@
+{
+  "train_stats": {
+    "clean": 35801,
+    "ambient": 101769,
+    "speech": 101534,
+    "easy_snr": 68024,
+    "med_snr": 67451,
+    "hard_snr": 67828,
+    "hard_negatives_sampled": 37360,
+    "ordinary_speech_sampled": 156912,
+    "ordinary_ambient_sampled": 44832,
+    "ordinary_other_sampled": 0,
+    "skipped_too_long": 0
+  }
+}

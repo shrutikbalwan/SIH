@@ -1,0 +1,90 @@
+
+========================================================================
+Model: ira_cnn_int8.tflite
+Positive clips: 0
+TPR @ 0.50: nan%
+FNR @ 0.50: nan%
+Negative clips: N/A
+Total audio: 0.0 min
+FAPH @ 0.50: nan
+
+========================================================================
+Model: ira_cnn_int8_v2.tflite
+Positive clips: 0
+TPR @ 0.50: nan%
+FNR @ 0.50: nan%
+Negative clips: N/A
+Total audio: 0.0 min
+FAPH @ 0.50: nan
+
+========================================================================
+Model: ira_cnn_quantized_v3.tflite
+Positive clips: 0
+TPR @ 0.50: nan%
+FNR @ 0.50: nan%
+Negative clips: N/A
+Total audio: 0.0 min
+FAPH @ 0.50: nan
+
+========================================================================
+Model: ira_cnn_int8.tflite
+Positive clips: 1364
+TPR @ 0.50: 65.54%
+FNR @ 0.50: 34.46%
+Negative clips: 4000
+Total audio: 66.7 min
+FAPH @ 0.50: 864.0000
+Per-condition TPR:
+  quiet_1m: TPR=63.0% (N=454)
+  quiet_20cm: TPR=70.9% (N=460)
+  quiet_50cm: TPR=62.7% (N=450)
+FAPH curve (threshold -> faph):
+  0.30 -> 1011.0000
+  0.40 -> 929.0000
+  0.50 -> 864.0000
+  0.60 -> 787.0000
+  0.70 -> 722.0000
+  0.80 -> 654.0000
+  0.90 -> 570.0000
+
+========================================================================
+Model: ira_cnn_int8_v2.tflite
+Positive clips: 1364
+TPR @ 0.50: 65.54%
+FNR @ 0.50: 34.46%
+Negative clips: 4000
+Total audio: 66.7 min
+FAPH @ 0.50: 864.0000
+Per-condition TPR:
+  quiet_1m: TPR=63.0% (N=454)
+  quiet_20cm: TPR=70.9% (N=460)
+  quiet_50cm: TPR=62.7% (N=450)
+FAPH curve (threshold -> faph):
+  0.30 -> 1011.0000
+  0.40 -> 929.0000
+  0.50 -> 864.0000
+  0.60 -> 787.0000
+  0.70 -> 722.0000
+  0.80 -> 654.0000
+  0.90 -> 570.0000
+
+========================================================================
+Model: ira_cnn_quantized_v3.tflite
+Positive clips: 1364
+TPR @ 0.50: 52.79%
+FNR @ 0.50: 47.21%
+Negative clips: 4000
+Total audio: 66.7 min
+FAPH @ 0.50: 511.0000
+Per-condition TPR:
+  quiet_1m: TPR=50.2% (N=454)
+  quiet_20cm: TPR=56.5% (N=460)
+  quiet_50cm: TPR=51.6% (N=450)
+FAPH curve (threshold -> faph):
+  0.30 -> 695.0000
+  0.40 -> 593.0000
+  0.50 -> 511.0000
+  0.60 -> 404.0000
+  0.70 -> 352.0000
+  0.80 -> 300.0000
+  0.90 -> 236.0000

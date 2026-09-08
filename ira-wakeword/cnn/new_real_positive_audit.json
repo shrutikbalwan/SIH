@@ -1,0 +1,29 @@
+{
+  "source_folder": "D:\\SIH\\ira-wakeword\\today ira wav",
+  "files_found": 836,
+  "readable": 836,
+  "unreadable": 0,
+  "extensions": {
+    ".wav": 836
+  },
+  "formats": {
+    "WAV/PCM_16": 836
+  },
+  "sample_rates": {
+    "16000": 836
+  },
+  "channels": {
+    "1": 836
+  },
+  "duration": {
+    "min": 0.6735,
+    "mean": 1.3176148325358852,
+    "median": 1.2335,
+    "max": 3.3135
+  },
+  "duplicate_files_byte": 5,
+  "duplicate_files_audio": 5,
+  "near_silent": 0,
+  "short_lt_0.5s": 0,
+  "speaker_ids_determinable": false
+}

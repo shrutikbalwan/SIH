@@ -1,0 +1,17 @@
+{
+  "candidates": 54,
+  "pool_candidates": {
+    "hard": 13,
+    "medium": 18,
+    "easy": 23
+  },
+  "pool_control": {
+    "hard": 167,
+    "easy": 558,
+    "medium": 275
+  },
+  "cand_v2_mean": 0.2882450520992279,
+  "ctrl_v2_mean": 0.21758213639259338,
+  "cand_v23_ge_043": 5,
+  "ctrl_v23_ge_043": 27
+}

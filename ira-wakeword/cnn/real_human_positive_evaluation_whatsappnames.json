@@ -1,0 +1,1802 @@
+{
+  "model": {
+    "path": "D:\\SIH\\ira-wakeword\\cnn\\models\\ira_cnn_v2_3_int8.tflite",
+    "sha256": "b9554c054bc9a57a00e874824e5a4ab9c3254b4505ca8a3ec67835d193103de0",
+    "sha256_verified": true,
+    "input_scale": 0.06078097224235535,
+    "input_zero_point": 49,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128,
+    "decision_rule": "WAKE iff q_out >= -25",
+    "effective_threshold": 0.40234375
+  },
+  "source_folder": "D:\\SIH\\ira-wakeword\\today ira wav",
+  "windowing": {
+    "primary": "exact max-energy 1-second window over all sample offsets",
+    "diagnostic": "sliding 1s window, 10ms hop, any-fire (not the verdict)",
+    "naive_first_second_rejected_because": "would truncate the VAD-active span in 685/836 files (82%)"
+  },
+  "counts": {
+    "files_found": 836,
+    "valid": 836,
+    "duplicates_removed": 5,
+    "evaluated_unique": 831
+  },
+  "primary": {
+    "n": 831,
+    "TP": 542,
+    "FN": 289,
+    "TPR_pct": 65.22262334536703,
+    "ci95_pct": [
+      61.874763692038414,
+      68.46204606448903
+    ]
+  },
+  "including_duplicates": {
+    "n": 836,
+    "TP": 547,
+    "FN": 289,
+    "TPR_pct": 65.43062200956938,
+    "ci95_pct": [
+      62.096893744432926,
+      68.6550920457714
+    ]
+  },
+  "diagnostic_any_fire": {
+    "TP": 781,
+    "FN": 50,
+    "TPR_pct": 93.98315282791818,
+    "ci95_pct": [
+      92.14414715862918,
+      95.50156348537794
+    ]
+  },
+  "score_distribution": {
+    "mean": 0.599099353188929,
+    "median": 0.72265625,
+    "min": 0.0,
+    "max": 0.99609375,
+    "P1": 0.00390625,
+    "P5": 0.01171875,
+    "P10": 0.05078125,
+    "P25": 0.2109375
+  },
+  "false_negatives": [
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.24 PM (1).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.41 AM (2).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.0335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.18 AM (1).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 2.0135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.18 AM (2).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.48.59 AM (2).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.04 AM (2).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.24 AM (1).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.37 AM.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.7535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.38 AM.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.17 AM (2).wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.30 AM.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 2.2535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.16.48 PM.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.36.51 PM.wav",
+      "q_out": -27,
+      "score": 0.39453125,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.52 AM.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.53 AM (2).wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.16 AM (2).wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.17 AM.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 2.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.19 AM.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.9335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.20 AM.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.15 AM.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.30.27 PM.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.37.34 PM.wav",
+      "q_out": -33,
+      "score": 0.37109375,
+      "duration_s": 0.9535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.39 AM (2).wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.47 AM (3).wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.16 AM.wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.19 AM (1).wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.31.38 PM.wav",
+      "q_out": -38,
+      "score": 0.3515625,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.37 PM.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.54 AM (1).wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.12 AM (2).wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.00 AM (2).wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.19 AM (1).wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.19 AM (3).wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.9135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.27 AM (2).wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.34 AM (2).wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.22.44 PM.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.30.55 PM.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.33 PM.wav",
+      "q_out": -43,
+      "score": 0.33203125,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.10.03 AM.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.14 AM.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.46 AM (1).wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.16 AM (2).wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.8535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.03 AM.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.0335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.26 AM.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.16 AM (3).wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.22.25 PM.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 2.0735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.32.23 PM.wav",
+      "q_out": -48,
+      "score": 0.3125,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.33 AM (1).wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 0.9935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.13 AM (2).wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.8135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.30.51 AM (2).wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.6935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.26 AM (1).wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.23 AM (2).wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.36.16 PM.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.15 PM.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.40.21 PM.wav",
+      "q_out": -53,
+      "score": 0.29296875,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.59 AM (2).wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.08 AM (1).wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.7135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.24 AM (2).wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.36.48 PM.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.57 PM.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.29.04 PM.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.33.04 PM.wav",
+      "q_out": -57,
+      "score": 0.27734375,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.40 PM.wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.13 AM (2).wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.30.48 AM.wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.37.15 PM.wav",
+      "q_out": -61,
+      "score": 0.26171875,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.38 PM.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.52 AM (1).wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.36 AM (2).wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.41 AM (1).wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.13 AM.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 2.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.00 AM (1).wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.23 AM (1).wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.30.51 PM.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.33.35 PM.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.36.35 PM.wav",
+      "q_out": -66,
+      "score": 0.2421875,
+      "duration_s": 0.9335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.18 AM (1).wav",
+      "q_out": -70,
+      "score": 0.2265625,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.17.36 PM.wav",
+      "q_out": -70,
+      "score": 0.2265625,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.00.37 PM.wav",
+      "q_out": -70,
+      "score": 0.2265625,
+      "duration_s": 2.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.38 PM (1).wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.10.00 AM (2).wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.24.59 AM (2).wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 2.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.28 AM.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.44 AM.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.28 AM (1).wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.32.05 PM.wav",
+      "q_out": -74,
+      "score": 0.2109375,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.42 PM.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.12 AM (2).wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.6135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.06 AM.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.7135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.30 AM (1).wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.23 AM.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.36.12 PM.wav",
+      "q_out": -77,
+      "score": 0.19921875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.36 PM (1).wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.40 PM (1).wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.14 AM (1).wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.45 AM (2).wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.24.06 PM.wav",
+      "q_out": -81,
+      "score": 0.18359375,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.57 AM (1).wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.37 AM (2).wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.24.58 AM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.6935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.46 AM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.47 AM (2).wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.48 AM (2).wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 0.9535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.29 AM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.15.59 PM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.17.09 PM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.28.42 PM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.10.49 PM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.33.45 PM.wav",
+      "q_out": -84,
+      "score": 0.171875,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.10 AM.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.15 AM (1).wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.33 AM.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.35 AM (1).wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.35 AM.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.37 AM (1).wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.27 AM (3).wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.29.17 PM.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.29.38 PM.wav",
+      "q_out": -87,
+      "score": 0.16015625,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.46 AM.wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.15 AM (1).wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.49 AM (1).wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.15 AM (1).wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.40.35 PM.wav",
+      "q_out": -90,
+      "score": 0.1484375,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.56 AM (2).wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.57 AM (2).wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.31 AM.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.36 AM.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.36.02 PM.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.11.00 PM.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.7735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.30.48 PM.wav",
+      "q_out": -93,
+      "score": 0.13671875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.37 PM (1).wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.27 AM.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.28 AM (1).wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.20 AM.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 2.5735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.28.45 PM.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.26.56 PM.wav",
+      "q_out": -95,
+      "score": 0.12890625,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.54 AM (2).wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.10.02 AM (3).wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.50 AM (1).wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.22 AM (2).wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.31 AM (1).wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.34.31 PM.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.33.31 PM.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.8135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.37.22 PM.wav",
+      "q_out": -98,
+      "score": 0.1171875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.19 AM (2).wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 0.9735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.20 AM (1).wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.20 AM (2).wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 2.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.31.26 PM.wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.36.29 PM.wav",
+      "q_out": -100,
+      "score": 0.109375,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.10.01 AM.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.36 AM (3).wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.12 AM (1).wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.00 AM (2).wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.15 AM (1).wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.16.21 PM.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.59.28 PM.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.9535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.10.10 PM.wav",
+      "q_out": -102,
+      "score": 0.1015625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.35 PM.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.36 PM (2).wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 3.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.37 PM (2).wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.38 PM (2).wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.52 AM (2).wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 2.5135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.34 AM (3).wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.04 AM.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.07 AM.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.47 AM (1).wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.0335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-07 at 12.06.53 AM.wav",
+      "q_out": -104,
+      "score": 0.09375,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.19 PM.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 2.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.44 AM.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.7935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.12 AM.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.15.01 PM.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.34.12 PM.wav",
+      "q_out": -106,
+      "score": 0.0859375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.37 AM.wav",
+      "q_out": -108,
+      "score": 0.078125,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.20 AM (3).wav",
+      "q_out": -108,
+      "score": 0.078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.30 AM (2).wav",
+      "q_out": -108,
+      "score": 0.078125,
+      "duration_s": 1.8735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.53 AM.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.13 AM (1).wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.9935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.15 AM.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.18 PM.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.22 PM.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.26.01 PM.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.0535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.36.19 PM.wav",
+      "q_out": -109,
+      "score": 0.07421875,
+      "duration_s": 1.5935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.39 PM (2).wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.39 PM.wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.41 PM (2).wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.12 AM (1).wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.32.06 PM.wav",
+      "q_out": -111,
+      "score": 0.06640625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.41 PM (1).wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.2735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.33 AM (2).wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.49 AM.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 0.9935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.23.47 PM.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.25 PM.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.31.04 PM.wav",
+      "q_out": -112,
+      "score": 0.0625,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.41 PM.wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.45 AM (1).wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.06 AM (1).wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 2.1335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.44 AM (3).wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.36.32 PM.wav",
+      "q_out": -113,
+      "score": 0.05859375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.36 PM.wav",
+      "q_out": -114,
+      "score": 0.0546875,
+      "duration_s": 1.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.29 AM (2).wav",
+      "q_out": -114,
+      "score": 0.0546875,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.40 PM (2).wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.24 PM.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.10.01 AM (1).wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.32 AM.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.51 PM.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.33.59 PM.wav",
+      "q_out": -115,
+      "score": 0.05078125,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.55 AM.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.12 AM.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.1735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.43 AM (2).wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.45 AM.wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.14 AM (1).wav",
+      "q_out": -116,
+      "score": 0.046875,
+      "duration_s": 2.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.30.54 AM.wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.25 AM (1).wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.27 AM (1).wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.27 AM (1).wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.28.12 PM.wav",
+      "q_out": -117,
+      "score": 0.04296875,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.13 AM.wav",
+      "q_out": -118,
+      "score": 0.0390625,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.22 AM.wav",
+      "q_out": -118,
+      "score": 0.0390625,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.32.10 PM.wav",
+      "q_out": -118,
+      "score": 0.0390625,
+      "duration_s": 1.7135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.34 AM (2).wav",
+      "q_out": -119,
+      "score": 0.03515625,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.48 AM (1).wav",
+      "q_out": -119,
+      "score": 0.03515625,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.28.21 PM.wav",
+      "q_out": -119,
+      "score": 0.03515625,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.07.39 PM (1).wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.57 AM.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.14 AM.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.6535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.49.04 AM.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.5335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.29.45 PM.wav",
+      "q_out": -120,
+      "score": 0.03125,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.15 AM.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.1335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.45 AM (2).wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.17.25 PM.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.00.18 PM.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.33.52 PM.wav",
+      "q_out": -121,
+      "score": 0.02734375,
+      "duration_s": 2.9135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.51 AM.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 2.0935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.14.16 AM.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.29 AM (1).wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.29 AM.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.1135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.30.19 PM.wav",
+      "q_out": -122,
+      "score": 0.0234375,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.53 AM (1).wav",
+      "q_out": -123,
+      "score": 0.01953125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.12 AM.wav",
+      "q_out": -123,
+      "score": 0.01953125,
+      "duration_s": 1.7335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.24.02 PM.wav",
+      "q_out": -123,
+      "score": 0.01953125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.34 AM (1).wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.38 AM (2).wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.42 AM (1).wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.59.42 PM.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.4135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.06 PM.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.09.37 PM.wav",
+      "q_out": -124,
+      "score": 0.015625,
+      "duration_s": 1.8135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.09.59 AM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.32 AM (1).wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.42 AM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.1535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.51 AM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.06 AM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.8735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.14.48 PM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.4735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.10.56 PM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.3735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.30.29 PM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.34.03 PM.wav",
+      "q_out": -125,
+      "score": 0.01171875,
+      "duration_s": 1.4935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.22 PM (3).wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.4335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.23 PM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.38 AM (1).wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.39 AM (1).wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.39 AM (3).wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.40 AM (1).wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.41 AM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.4535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.42 AM (2).wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.43 AM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.44 AM (2).wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.3135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.48 AM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.28.17 PM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.9735
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.28.38 PM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.7935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.48.41 PM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 2.6935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.50.09 PM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.32.04 PM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.5535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.33.54 PM.wav",
+      "q_out": -126,
+      "score": 0.0078125,
+      "duration_s": 1.6935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.22 PM (1).wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.22 PM (2).wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-06 at 11.24.23 PM (1).wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.38 AM.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.5135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.40 AM.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.1935
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.04.15 AM (2).wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 2.1735
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.06 AM (2).wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6535
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.48.59 AM (1).wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.2135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.53.25 AM.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.54.22 AM (1).wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 2.0335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.14.53 PM.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.2535
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.49.31 PM.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.3935
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 11.34.06 PM.wav",
+      "q_out": -127,
+      "score": 0.00390625,
+      "duration_s": 1.6135
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 1.21.40 AM (2).wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.3335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.25.05 AM (1).wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.8335
+    },
+    {
+      "name": "WhatsApp Audio 2026-09-07 at 12.48.59 AM.wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.2335
+    },
+    {
+      "name": "WhatsApp Ptt 2026-09-06 at 10.14.40 PM.wav",
+      "q_out": -128,
+      "score": 0.0,
+      "duration_s": 1.6535
+    }
+  ],
+  "speaker_ids_determinable": false,
+  "classification": "FAIL"
+}

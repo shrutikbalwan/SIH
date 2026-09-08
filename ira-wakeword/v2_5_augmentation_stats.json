@@ -1,0 +1,16 @@
+{
+  "train_stats": {
+    "clean": 36129,
+    "ambient": 152516,
+    "speech": 50459,
+    "easy_snr": 67645,
+    "med_snr": 67828,
+    "hard_snr": 67502,
+    "silent_bg_rejected": 0,
+    "easy_speech_sampled": 119552,
+    "medium_speech_sampled": 52304,
+    "hard_speech_sampled": 29888,
+    "ambient_sampled": 37360,
+    "other_sampled": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "train_stats": {
+        "num_positives_used": 239104,
+        "clean": 35672,
+        "ambient": 101983,
+        "speech": 101449,
+        "easy_snr": 67951,
+        "med_snr": 67978,
+        "hard_snr": 67503,
+        "skipped_too_long": 0,
+        "silent_bg_rejected": 0,
+        "hard_negatives_sampled": 29888,
+        "ordinary_other_sampled": 0,
+        "ordinary_ambient_sampled": 104864,
+        "ordinary_speech_sampled": 104352
+    },
+    "val_stats": {
+        "num_positives_used": 998,
+        "clean": 157,
+        "ambient": 429,
+        "speech": 412,
+        "easy_snr": 290,
+        "med_snr": 246,
+        "hard_snr": 305,
+        "skipped_too_long": 0,
+        "silent_bg_rejected": 0,
+        "hard_negatives_sampled": 0,
+        "ordinary_other_sampled": 0,
+        "ordinary_ambient_sampled": 0,
+        "ordinary_speech_sampled": 0
+    }
+}

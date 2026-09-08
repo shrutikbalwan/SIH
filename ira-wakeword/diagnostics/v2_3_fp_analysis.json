@@ -1,0 +1,480 @@
+{
+  "groups": {
+    "A: false positives (>=0.43)": {
+      "group": "A: false positives (>=0.43)",
+      "n": 58,
+      "score_mean": 0.6527,
+      "score_median": 0.5973,
+      "score_P10": 0.4623,
+      "score_P90": 0.9037,
+      "speaker_count": 15,
+      "clips_per_speaker_min": 1,
+      "clips_per_speaker_median": 2.0,
+      "clips_per_speaker_max": 13
+    },
+    "B: near-miss TN (top 100 <0.43)": {
+      "group": "B: near-miss TN (top 100 <0.43)",
+      "n": 100,
+      "score_mean": 0.2971,
+      "score_median": 0.2887,
+      "score_P10": 0.2225,
+      "score_P90": 0.3842,
+      "speaker_count": 17,
+      "clips_per_speaker_min": 1,
+      "clips_per_speaker_median": 5.0,
+      "clips_per_speaker_max": 16
+    },
+    "C: low-score control (100 random <0.10)": {
+      "group": "C: low-score control (100 random <0.10)",
+      "n": 100,
+      "score_mean": 0.0163,
+      "score_median": 0.0089,
+      "score_P10": 0.0006,
+      "score_P90": 0.0416,
+      "speaker_count": 17,
+      "clips_per_speaker_min": 2,
+      "clips_per_speaker_median": 5.0,
+      "clips_per_speaker_max": 16
+    }
+  },
+  "ira_like_rate": {
+    "A: FP": {
+      "n": 58,
+      "hits": 2
+    },
+    "B: near-miss TN": {
+      "n": 100,
+      "hits": 3
+    },
+    "C: low-score control": {
+      "n": 100,
+      "hits": 4
+    }
+  },
+  "fp_patterns": [
+    [
+      "IH R EH",
+      1
+    ],
+    [
+      "IH R AH",
+      1
+    ]
+  ],
+  "fp_top_words": [
+    [
+      "and",
+      11
+    ],
+    [
+      "the",
+      8
+    ],
+    [
+      "of",
+      7
+    ],
+    [
+      "to",
+      6
+    ],
+    [
+      "her",
+      5
+    ],
+    [
+      "with",
+      4
+    ],
+    [
+      "at",
+      3
+    ],
+    [
+      "a",
+      3
+    ],
+    [
+      "i",
+      3
+    ],
+    [
+      "this",
+      3
+    ],
+    [
+      "in",
+      3
+    ],
+    [
+      "here",
+      2
+    ],
+    [
+      "asked",
+      2
+    ],
+    [
+      "wrung",
+      2
+    ],
+    [
+      "missus",
+      2
+    ],
+    [
+      "our",
+      2
+    ],
+    [
+      "she",
+      2
+    ],
+    [
+      "on",
+      2
+    ],
+    [
+      "well",
+      2
+    ],
+    [
+      "dear",
+      2
+    ],
+    [
+      "you",
+      2
+    ],
+    [
+      "is",
+      2
+    ],
+    [
+      "for",
+      2
+    ],
+    [
+      "see",
+      2
+    ],
+    [
+      "my",
+      2
+    ],
+    [
+      "his",
+      2
+    ],
+    [
+      "decoration",
+      2
+    ],
+    [
+      "great",
+      2
+    ],
+    [
+      "morrow",
+      2
+    ],
+    [
+      "doing",
+      1
+    ],
+    [
+      "he",
+      1
+    ],
+    [
+      "hands",
+      1
+    ],
+    [
+      "back",
+      1
+    ],
+    [
+      "port",
+      1
+    ],
+    [
+      "shimerda",
+      1
+    ],
+    [
+      "understand",
+      1
+    ],
+    [
+      "good",
+      1
+    ],
+    [
+      "yes",
+      1
+    ],
+    [
+      "ravine",
+      1
+    ],
+    [
+      "looking",
+      1
+    ]
+  ],
+  "fp_top_bigrams": [
+    [
+      "to morrow",
+      2
+    ],
+    [
+      "doing here",
+      1
+    ],
+    [
+      "here he",
+      1
+    ],
+    [
+      "he asked",
+      1
+    ],
+    [
+      "wrung her",
+      1
+    ],
+    [
+      "her hands",
+      1
+    ],
+    [
+      "back to",
+      1
+    ],
+    [
+      "to her",
+      1
+    ],
+    [
+      "her port",
+      1
+    ],
+    [
+      "missus shimerda",
+      1
+    ],
+    [
+      "shimerda understand",
+      1
+    ],
+    [
+      "the good",
+      1
+    ],
+    [
+      "good yes",
+      1
+    ],
+    [
+      "yes our",
+      1
+    ],
+    [
+      "the ravine",
+      1
+    ],
+    [
+      "ravine looking",
+      1
+    ],
+    [
+      "she wore",
+      1
+    ],
+    [
+      "wore on",
+      1
+    ],
+    [
+      "on her",
+      1
+    ],
+    [
+      "her middle",
+      1
+    ],
+    [
+      "irreverent well",
+      1
+    ],
+    [
+      "well dear",
+      1
+    ],
+    [
+      "dear how",
+      1
+    ],
+    [
+      "she made",
+      1
+    ],
+    [
+      "made missus",
+      1
+    ],
+    [
+      "bartley at",
+      1
+    ],
+    [
+      "at least",
+      1
+    ],
+    [
+      "least tell",
+      1
+    ],
+    [
+      "tell me",
+      1
+    ],
+    [
+      "cost when",
+      1
+    ],
+    [
+      "when you",
+      1
+    ],
+    [
+      "you order",
+      1
+    ],
+    [
+      "triumph of",
+      1
+    ],
+    [
+      "of christianity",
+      1
+    ],
+    [
+      "abalone is",
+      1
+    ],
+    [
+      "is tough",
+      1
+    ],
+    [
+      "tough and",
+      1
+    ],
+    [
+      "of our",
+      1
+    ],
+    [
+      "our visit",
+      1
+    ],
+    [
+      "visit and",
+      1
+    ]
+  ],
+  "speaker_concentration": [
+    {
+      "speaker": "652",
+      "fp": 13,
+      "total": 100,
+      "rate": 13.0
+    },
+    {
+      "speaker": "1988",
+      "fp": 11,
+      "total": 100,
+      "rate": 11.0
+    },
+    {
+      "speaker": "116",
+      "fp": 5,
+      "total": 100,
+      "rate": 5.0
+    },
+    {
+      "speaker": "2136",
+      "fp": 5,
+      "total": 143,
+      "rate": 3.4965034965034967
+    },
+    {
+      "speaker": "4446",
+      "fp": 4,
+      "total": 100,
+      "rate": 4.0
+    },
+    {
+      "speaker": "1580",
+      "fp": 4,
+      "total": 100,
+      "rate": 4.0
+    },
+    {
+      "speaker": "1284",
+      "fp": 3,
+      "total": 100,
+      "rate": 3.0
+    },
+    {
+      "speaker": "8297",
+      "fp": 2,
+      "total": 100,
+      "rate": 2.0
+    },
+    {
+      "speaker": "8188",
+      "fp": 2,
+      "total": 100,
+      "rate": 2.0
+    },
+    {
+      "speaker": "1970",
+      "fp": 2,
+      "total": 143,
+      "rate": 1.3986013986013985
+    },
+    {
+      "speaker": "908",
+      "fp": 2,
+      "total": 100,
+      "rate": 2.0
+    },
+    {
+      "speaker": "6829",
+      "fp": 2,
+      "total": 100,
+      "rate": 2.0
+    },
+    {
+      "speaker": "8463",
+      "fp": 1,
+      "total": 100,
+      "rate": 1.0
+    },
+    {
+      "speaker": "2277",
+      "fp": 1,
+      "total": 100,
+      "rate": 1.0
+    },
+    {
+      "speaker": "2902",
+      "fp": 1,
+      "total": 100,
+      "rate": 1.0
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "frozen_model": "D:\\SIH\\ira-wakeword\\cnn\\models\\ira_cnn_v2_3_best_loss.keras",
+  "frozen_model_sha256": "2dde43c77a6ea85d88ed2f2d6136cf5da6f6ca5fa864be36f69a00c2f87d03b6",
+  "operating_threshold": 0.43,
+  "int8_model": "D:\\SIH\\ira-wakeword\\cnn\\models\\ira_cnn_v2_3_int8.tflite",
+  "int8_model_sha256": "b9554c054bc9a57a00e874824e5a4ab9c3254b4505ca8a3ec67835d193103de0",
+  "int8_size_bytes": 13312,
+  "representative_data": {
+    "source_split": "train",
+    "n": 1024,
+    "composition": {
+      "pos_ambient": 213,
+      "pos_speech": 213,
+      "pos_clean": 86,
+      "speech_neg": 432,
+      "ambient_neg": 80
+    },
+    "seed": 20260906,
+    "file": "D:\\SIH\\ira-wakeword\\cnn\\models\\v2_3_int8_representative_train_only.npy"
+  },
+  "input_quantization": {
+    "scale": 0.06078097224235535,
+    "zero_point": 49
+  },
+  "output_quantization": {
+    "scale": 0.00390625,
+    "zero_point": -128
+  },
+  "unseen_test_loaded": false,
+  "retrained": false
+}
