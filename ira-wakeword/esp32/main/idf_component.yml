@@ -1,0 +1,8 @@
+## IDF Component Manager manifest.
+## Pinned deliberately: an unpinned "latest" would let the TFLite Micro API
+## change under us and silently alter numerics.
+dependencies:
+  idf:
+    version: ">=5.1,<6.0"
+  esp-tflite-micro:
+    version: "==1.3.1"

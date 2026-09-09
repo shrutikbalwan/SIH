@@ -1,0 +1,19 @@
+# Target
+CONFIG_IDF_TARGET="esp32s3"
+
+# Roomy main task stack: the frontend uses static buffers, but TFLM's
+# AllocateTensors and the self-test comparison still want headroom.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+# Optimise for speed; the 100 ms stride budget matters.
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Keep asserts on for the self-test stage.
+CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_ENABLE=y
+
+# Heap poisoning off (adds latency); enable while debugging if needed.
+CONFIG_HEAP_POISONING_DISABLED=y
+
+# PSRAM: NOT required by this firmware. Everything is static or internal heap.
+# Enable only if a later stage needs it.
+# CONFIG_SPIRAM=y
