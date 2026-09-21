@@ -8,14 +8,18 @@
 |---|---|---|
 | [`ira-wakeword/esp32/`](ira-wakeword/esp32/) | Boot self-test firmware, **no microphone** | Present, never compiled for Xtensa |
 | [`ira-wakeword/esp32-live/`](ira-wakeword/esp32-live/) | Live firmware: I2S capture, continuous detection, smoothing | **Empty** -- to be copied in |
-| [`ira-wakeword/results/`](ira-wakeword/results/) | Evidence measured on real hardware | **Empty** -- nothing recorded yet |
+| [`ira-wakeword/results/`](ira-wakeword/results/) | Evidence measured on real hardware | First measurements recorded — see below |
 
 **Hardware measurements are recorded in
 [`ira-wakeword/results/HARDWARE_RESULTS.md`](ira-wakeword/results/HARDWARE_RESULTS.md).**
-Every field in it currently reads *not yet recorded*. Tensor arena usage, free
-heap, stack high-water, feature-extraction time and inference time have **not
-been measured** -- see `esp32/ESP32_ON_DEVICE_SELF_TEST_REPORT.md`, which states
-that no board was available and that no figure was invented in its place.
+The first real measurements from live firmware are now recorded: inference time
+30.9 ms, inference interval ~136 ms, 3-of-3 smoothing, confirmed detection at
+probability 0.9961. Fields not yet measured (RAM, heap, arena) remain marked
+*not yet recorded*.
+
+Serial log from the live ESP32-S3 firmware:
+
+![Serial log — IRA detection on ESP32-S3](ira-wakeword/results/screenshots/serial_log_detection.png)
 
 Figures that are computed from source rather than measured -- model size,
 configured arena size, static RAM totals -- are labelled as such wherever they

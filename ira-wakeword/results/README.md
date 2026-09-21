@@ -1,12 +1,13 @@
 # results/ — Hardware Evidence
 
-**Status: EMPTY. No hardware measurements have been recorded yet.**
+**Status: FIRST MEASUREMENTS RECORDED.** Inference time, interval, smoothing,
+and detection probability are now filled in from the serial log below.
+Fields not yet measured (RAM, heap, arena) remain *not yet recorded*.
 
 This folder holds evidence **measured on real ESP32-S3 hardware** — figures
 observed on a board, not computed on a desktop, and not estimated.
 
-Hardware testing was carried out on a different machine. The results have not
-yet been copied here.
+![Serial log — IRA detection on ESP32-S3](screenshots/serial_log_detection.png)
 
 ---
 
@@ -15,7 +16,7 @@ yet been copied here.
 | File | Purpose |
 |---|---|
 | `HARDWARE_RESULTS.md` | The measurement table. Every field currently reads *not yet recorded*. |
-| `screenshots/` | Serial-monitor screenshots backing each figure (to be added). |
+| `screenshots/` | Serial-monitor screenshots backing each figure. `serial_log_detection.png` is the first. |
 
 ---
 
