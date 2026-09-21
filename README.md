@@ -49,6 +49,26 @@ The project has progressed through several model iterations (V1 through V2.8) to
 
 ---
 
+## Third-Party Assets
+
+`en_US-lessac-medium.onnx` (60.27 MB) and its `.onnx.json` config are the
+**Piper TTS voice model** used to generate the synthetic positive training
+samples (~93% of all positives). They are third-party artifacts, not project
+source, and are untracked via `.gitignore` to keep the working tree clean.
+
+Download from the Piper voices repository:
+<https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/lessac/medium>
+
+```bash
+curl -LO https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx
+curl -LO https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json
+```
+
+Place both in `ira-wakeword/`. Piper is MIT-licensed; the voice models are
+distributed under their own terms — see the Piper repository for details.
+
+---
+
 ## Model Architecture
 
 The model is a **plain CNN**, not a DS-CNN. `build_model()` in

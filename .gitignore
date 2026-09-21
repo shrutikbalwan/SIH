@@ -28,3 +28,7 @@ managed_components/
 *.exe
 *.bin
 *.elf
+
+# --- Third-party TTS voice model (Piper); see README ---
+*.onnx
+*.onnx.json
