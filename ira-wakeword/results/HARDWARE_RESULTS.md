@@ -56,12 +56,12 @@ link. If a field was never measured, leave it as is.
 |---|---|---|
 | Feature extraction time (mean) | `not yet recorded` | `not yet recorded` |
 | Feature extraction time (max) | `not yet recorded` | `not yet recorded` |
-| Inference time (mean) | `not yet recorded` | `not yet recorded` |
+| Inference time (mean) | 30.9 ms (30.91–30.94 across readings) | [Screenshot](screenshots/serial_log_detection.png) |
 | Inference time (max) | `not yet recorded` | `not yet recorded` |
 | Total per-window time (mean) | `not yet recorded` | `not yet recorded` |
 | Total per-window time (max) | `not yet recorded` | `not yet recorded` |
-| Inference interval / stride | `not yet recorded` | `not yet recorded` |
-| Budget utilisation | `not yet recorded` | `not yet recorded` |
+| Inference interval / stride | ~136 ms, from timestamp deltas | [Screenshot](screenshots/serial_log_detection.png) |
+| Budget utilisation | derived, not measured — 30.9/136 = 22.8% one core, 11.4% across two | [Screenshot](screenshots/serial_log_detection.png) |
 | Real-time feasible | `not yet recorded` | `not yet recorded` |
 | Idle CPU | `not yet recorded` | `not yet recorded` |
 | Number of timing iterations | `not yet recorded` | — |
@@ -72,10 +72,10 @@ link. If a field was never measured, leave it as is.
 
 | Field | Value | Evidence |
 |---|---|---|
-| Detection threshold (probability) | `not yet recorded` | `not yet recorded` |
+| Detection threshold (probability) | inferred ~0.98, to be confirmed from live firmware source | [Screenshot](screenshots/serial_log_detection.png) |
 | Detection threshold (INT8 `q_out`) | `not yet recorded` | `not yet recorded` |
-| Smoothing rule | `not yet recorded` | `not yet recorded` |
-| Refractory / ignore-after-accept | `not yet recorded` | `not yet recorded` |
+| Smoothing rule | 3 consecutive candidates required ("candidate 1/3, 2/3, 3/3") | [Screenshot](screenshots/serial_log_detection.png) |
+| Refractory / ignore-after-accept | a 0.9922 reading immediately after detection was not counted | [Screenshot](screenshots/serial_log_detection.png) |
 | Audio guard active | `not yet recorded` | `not yet recorded` |
 
 > Record the value that was **flashed**, not the intended one. The committed
@@ -94,7 +94,7 @@ link. If a field was never measured, leave it as is.
 | Field | Value | Evidence |
 |---|---|---|
 | Wake-word utterances attempted | `not yet recorded` | `not yet recorded` |
-| Detections | `not yet recorded` | `not yet recorded` |
+| Detections | confirmed detection: probability 0.9961 | [Screenshot](screenshots/serial_log_detection.png) |
 | Missed | `not yet recorded` | `not yet recorded` |
 | False accepts observed | `not yet recorded` | `not yet recorded` |
 | Observation duration | `not yet recorded` | `not yet recorded` |
@@ -132,4 +132,4 @@ Place images in `screenshots/` and link each from the tables above.
 
 | File | Shows |
 |---|---|
-| `not yet recorded` | `not yet recorded` |
+| [serial_log_detection.png](screenshots/serial_log_detection.png) | live firmware serial log showing detection |
