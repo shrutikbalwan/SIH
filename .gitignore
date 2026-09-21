@@ -7,3 +7,24 @@ venv
 dataset/
 datasets/
 dataset
+
+# --- Credentials: never commit ---
+secrets.h
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+
+# --- ESP-IDF generated config (may contain Wi-Fi credentials) ---
+sdkconfig
+sdkconfig.old
+!sdkconfig.defaults
+
+# --- Build output ---
+build/
+managed_components/
+*.exe
+*.bin
+*.elf
