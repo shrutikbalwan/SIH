@@ -1,5 +1,28 @@
 # IRA Wake-Word Project
 
+## Hardware Status
+
+**No measurement in this repository was taken on ESP32-S3 hardware.**
+
+| Folder | Holds | Status |
+|---|---|---|
+| [`ira-wakeword/esp32/`](ira-wakeword/esp32/) | Boot self-test firmware, **no microphone** | Present, never compiled for Xtensa |
+| [`ira-wakeword/esp32-live/`](ira-wakeword/esp32-live/) | Live firmware: I2S capture, continuous detection, smoothing | **Empty** -- to be copied in |
+| [`ira-wakeword/results/`](ira-wakeword/results/) | Evidence measured on real hardware | **Empty** -- nothing recorded yet |
+
+**Hardware measurements are recorded in
+[`ira-wakeword/results/HARDWARE_RESULTS.md`](ira-wakeword/results/HARDWARE_RESULTS.md).**
+Every field in it currently reads *not yet recorded*. Tensor arena usage, free
+heap, stack high-water, feature-extraction time and inference time have **not
+been measured** -- see `esp32/ESP32_ON_DEVICE_SELF_TEST_REPORT.md`, which states
+that no board was available and that no figure was invented in its place.
+
+Figures that are computed from source rather than measured -- model size,
+configured arena size, static RAM totals -- are labelled as such wherever they
+appear.
+
+---
+
 ## Project Directory Structure
 Below is an exhaustive index of the folders and their general purpose in this repository.
 
@@ -27,6 +50,8 @@ Below is an exhaustive index of the folders and their general purpose in this re
 - **`micro-wake-word/`**: Third-party library, used only by the retracted
   `audit/evaluate.py`. Its `pymicro_features` MicroFrontend is **not** used by
   training or by the device, and must not be used to evaluate this model.
+- **`esp32-live/`**: Reserved for the live capture firmware (I2S microphone, continuous detection, smoothing). Currently empty.
+- **`results/`**: Evidence measured on real ESP32-S3 hardware, with screenshots. Currently empty; see `results/HARDWARE_RESULTS.md`.
 - **`build/`**: Compiled binaries and executables for local or host testing (e.g., `host_selftest.exe`).
 
 ---
