@@ -51,21 +51,41 @@ The project has progressed through several model iterations (V1 through V2.8) to
 
 ## Third-Party Assets
 
-`en_US-lessac-medium.onnx` (60.27 MB) and its `.onnx.json` config are the
-**Piper TTS voice model** used to generate the synthetic positive training
-samples (~93% of all positives). They are third-party artifacts, not project
-source, and are untracked via `.gitignore` to keep the working tree clean.
+### Piper TTS voice models
 
-Download from the Piper voices repository:
-<https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/lessac/medium>
+Five **Piper TTS voice models** were used to generate the synthetic positive
+training samples, which make up ~93% of all positives in the dataset. They are
+third-party artifacts, not project source, and are untracked via `.gitignore`
+(they total ~301 MB). The files remain on disk for contributors who already
+have them.
+
+| Voice | Size | Source |
+|---|---|---|
+| `en_US-amy-medium` | 60.27 MB | [download](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/amy/medium) |
+| `en_US-hfc_female-medium` | 60.27 MB | [download](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/hfc_female/medium) |
+| `en_US-hfc_male-medium` | 60.27 MB | [download](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/hfc_male/medium) |
+| `en_US-lessac-medium` | 60.27 MB | [download](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/lessac/medium) |
+| `en_US-ryan-medium` | 60.27 MB | [download](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/ryan/medium) |
+
+Each voice is two files: `<name>.onnx` (the model) and `<name>.onnx.json`
+(its config). Both are required.
+
+Restore them into `ira-wakeword/voices/`:
 
 ```bash
-curl -LO https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx
-curl -LO https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json
+cd ira-wakeword/voices
+for v in amy hfc_female hfc_male lessac ryan; do
+  curl -LO "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/$v/medium/en_US-$v-medium.onnx"
+  curl -LO "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/$v/medium/en_US-$v-medium.onnx.json"
+done
 ```
 
-Place both in `ira-wakeword/`. Piper is MIT-licensed; the voice models are
-distributed under their own terms — see the Piper repository for details.
+A copy of `en_US-lessac-medium.onnx` also sits at `ira-wakeword/` and is
+likewise untracked.
+
+Piper itself is MIT-licensed; the voice models carry their own terms -- see the
+[Piper voices repository](https://huggingface.co/rhasspy/piper-voices) for
+details.
 
 ---
 
