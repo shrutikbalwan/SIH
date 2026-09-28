@@ -1,9 +1,17 @@
 # Hardware Results — IRA Wake-Word on ESP32-S3
 
-> **STATUS: NOT YET RECORDED.**
-> Every value in this document is a placeholder. No figure below has been
-> measured. Do not quote anything from this file until the value is filled in
-> and its evidence linked.
+> **STATUS: PARTIALLY RECORDED.**
+> Timing, smoothing and one detection are measured. Memory (arena, heap, stack)
+> and feature parity are **not** — the firmware would need to print them.
+> Fields still reading `not yet recorded` have not been measured. Do not quote
+> them.
+
+All measured values below come from a single source: a **3.53 s excerpt** of
+serial output (27 inference lines, timestamps 104823–108353 ms) captured on the
+live firmware and saved as
+[`screenshots/serial_log_detection.png`](screenshots/serial_log_detection.png).
+That excerpt contains **one** detection. Figures derived from it are marked
+*derived*; figures read directly off it are marked *measured*.
 
 Fill a row only when you have the measurement **and** the artifact that shows
 it. Replace `not yet recorded` with the observed value and replace the evidence
@@ -21,7 +29,7 @@ link. If a field was never measured, leave it as is.
 | PSRAM present | `not yet recorded` | `not yet recorded` |
 | Microphone / I2S device | `not yet recorded` | `not yet recorded` |
 | Firmware version / commit | `not yet recorded` | `not yet recorded` |
-| ESP-IDF version | `not yet recorded` | `not yet recorded` |
+| ESP-IDF version | **v6.0.3** *(from the serial-monitor window title `IDF_v6.0.3_Powershell` — confirm against `idf.py --version`)* | [Screenshot](screenshots/serial_log_detection.png) |
 | esp-tflite-micro version | `not yet recorded` | `not yet recorded` |
 | Model file | `not yet recorded` | `not yet recorded` |
 | Model SHA-256 | `not yet recorded` | `not yet recorded` |
@@ -54,17 +62,27 @@ link. If a field was never measured, leave it as is.
 
 | Field | Value | Evidence |
 |---|---|---|
-| Feature extraction time (mean) | `not yet recorded` | `not yet recorded` |
+| Feature extraction time (mean) | `not separately reported` — the logged 30.92 ms appears to include it (interval − inference = 104.8 ms ≈ a 100 ms delay + slop) | [Screenshot](screenshots/serial_log_detection.png) |
 | Feature extraction time (max) | `not yet recorded` | `not yet recorded` |
-| Inference time (mean) | 30.9 ms (30.91–30.94 across readings) | [Screenshot](screenshots/serial_log_detection.png) |
-| Inference time (max) | `not yet recorded` | `not yet recorded` |
+| **Inference time (mean)** | **30.92 ms** *(measured)* | [Screenshot](screenshots/serial_log_detection.png) |
+| **Inference time (max)** | **30.94 ms** *(measured, 27 readings)* | [Screenshot](screenshots/serial_log_detection.png) |
 | Total per-window time (mean) | `not yet recorded` | `not yet recorded` |
 | Total per-window time (max) | `not yet recorded` | `not yet recorded` |
-| Inference interval / stride | ~136 ms, from timestamp deltas | [Screenshot](screenshots/serial_log_detection.png) |
-| Budget utilisation | derived, not measured — 30.9/136 = 22.8% one core, 11.4% across two | [Screenshot](screenshots/serial_log_detection.png) |
-| Real-time feasible | `not yet recorded` | `not yet recorded` |
+| **Inference interval / stride** | **135.8 ms mean** (median 135.0, range 130–150, quantised to the 10 ms FreeRTOS tick); 7.37 inferences/s *(measured, 26 intervals)* | [Screenshot](screenshots/serial_log_detection.png) |
+| **Budget utilisation** | *(derived)* 30.92 / 135.8 = **22.77% of one core**, **11.39% across two cores** | [Screenshot](screenshots/serial_log_detection.png) |
+| Real-time feasible | Yes — inference (30.92 ms) fits well inside the 135.8 ms interval *(derived)* | [Screenshot](screenshots/serial_log_detection.png) |
 | Idle CPU | `not yet recorded` | `not yet recorded` |
-| Number of timing iterations | `not yet recorded` | — |
+| Number of timing iterations | 27 inference lines / 26 intervals in the captured excerpt | [Screenshot](screenshots/serial_log_detection.png) |
+
+> **On the "two cores" figure.** A single inference task runs on **one** core.
+> The 11.39% figure is % of total system capacity across both cores; the core
+> actually doing the work sits at **22.77%**. Quote both, or state which one you
+> mean.
+>
+> **Planned change, not yet measured.** Raising the loop delay from ~100 ms to
+> 140 ms would give an interval of ~176 ms → 17.6% of one core / 8.8% of two.
+> Those are **predictions** from the measured overhead, not measurements. Do not
+> record them here until a new log confirms them.
 
 ---
 
@@ -72,11 +90,35 @@ link. If a field was never measured, leave it as is.
 
 | Field | Value | Evidence |
 |---|---|---|
-| Detection threshold (probability) | inferred ~0.98, to be confirmed from live firmware source | [Screenshot](screenshots/serial_log_detection.png) |
-| Detection threshold (INT8 `q_out`) | `not yet recorded` | `not yet recorded` |
-| Smoothing rule | 3 consecutive candidates required ("candidate 1/3, 2/3, 3/3") | [Screenshot](screenshots/serial_log_detection.png) |
-| Refractory / ignore-after-accept | a 0.9922 reading immediately after detection was not counted | [Screenshot](screenshots/serial_log_detection.png) |
-| Audio guard active | `not yet recorded` | `not yet recorded` |
+| Detection threshold (probability) | **≈ 0.98046875, NOT 0.95** *(inferred — see below; confirm in firmware source)* | [Screenshot](screenshots/serial_log_detection.png) |
+| Detection threshold (INT8 `q_out`) | **q ≥ 123** *(inferred)* | [Screenshot](screenshots/serial_log_detection.png) |
+| **Smoothing rule** | **3 consecutive candidates required** — log prints `IRA candidate 1/3`, `2/3`, `3/3`, then `>>> IRA DETECTED <<<` *(measured)* | [Screenshot](screenshots/serial_log_detection.png) |
+| Refractory / ignore-after-accept | **≈ 410 ms** *(inferred)* — a 0.9922 reading 140 ms after detection was not counted as a candidate | [Screenshot](screenshots/serial_log_detection.png) |
+| Audio guard active | `not yet recorded` — RMS is logged per line, but no rejection was observed in the excerpt | [Screenshot](screenshots/serial_log_detection.png) |
+
+> ### ⚠️ The flashed threshold does not appear to be 0.95
+>
+> The log constrains it directly. Output quantization is `p = (q + 128) / 256`:
+>
+> | timestamp | p | q | candidate? |
+> |---|---|---|---|
+> | 106443 | 0.9766 | 122 | **no** |
+> | 106583 | 0.9805 | 123 | **yes — 1/3** |
+>
+> A reading of 0.9766 did **not** start the candidate run; 0.9805 did. The
+> threshold therefore sits above 0.9766 and at or below 0.9805, i.e.
+> **q ≥ 123, p ≥ 251/256 = 0.98046875**. If it were 0.95 (q ≥ 116), the 0.9766
+> reading would have counted.
+>
+> The refractory figure is inferred the same way: after the detection at
+> 106863, readings of 0.9922 and 0.9766 were both skipped, and candidates
+> resumed at 107273 — about 410 ms later.
+>
+> **Both are inferences from a single 3.53 s excerpt, not readings of the
+> source.** Confirm against the live firmware before quoting. It matters: the
+> project documentation elsewhere states a 0.95 threshold, and the committed
+> self-test firmware uses `IRA_Q_THRESHOLD (-25)` — p ≥ 0.40234375 — with no
+> smoothing at all. Three different values are in play.
 
 > Record the value that was **flashed**, not the intended one. The committed
 > self-test firmware uses `IRA_Q_THRESHOLD (-25)` — p >= 0.40234375 — and
@@ -93,11 +135,11 @@ link. If a field was never measured, leave it as is.
 
 | Field | Value | Evidence |
 |---|---|---|
-| Wake-word utterances attempted | `not yet recorded` | `not yet recorded` |
-| Detections | confirmed detection: probability 0.9961 | [Screenshot](screenshots/serial_log_detection.png) |
+| Wake-word utterances attempted | `not yet recorded` — not determinable from the log alone | `not yet recorded` |
+| **Detections** | **1** in the excerpt — `>>> IRA DETECTED <<<`, probability **0.9961** *(measured)* | [Screenshot](screenshots/serial_log_detection.png) |
 | Missed | `not yet recorded` | `not yet recorded` |
-| False accepts observed | `not yet recorded` | `not yet recorded` |
-| Observation duration | `not yet recorded` | `not yet recorded` |
+| False accepts observed | **0** in 3.53 s *(measured — far too short a window to estimate a rate)* | [Screenshot](screenshots/serial_log_detection.png) |
+| **Observation duration** | **3.53 s** (104823 → 108353 ms) *(measured)* | [Screenshot](screenshots/serial_log_detection.png) |
 | Test environment | `not yet recorded` | `not yet recorded` |
 | Distance from microphone | `not yet recorded` | `not yet recorded` |
 | Speakers tested | `not yet recorded` | `not yet recorded` |

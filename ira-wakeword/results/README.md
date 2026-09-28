@@ -15,7 +15,7 @@ observed on a board, not computed on a desktop, and not estimated.
 
 | File | Purpose |
 |---|---|
-| `HARDWARE_RESULTS.md` | The measurement table. Every field currently reads *not yet recorded*. |
+| `HARDWARE_RESULTS.md` | The measurement table. Timing, smoothing and one detection are recorded; memory and feature parity are not. |
 | `screenshots/` | Serial-monitor screenshots backing each figure. `serial_log_detection.png` is the first. |
 
 ---
